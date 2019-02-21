@@ -1,0 +1,36 @@
+/=#
+
+#langdef en-US "English"
+
+#string STR_SBC_PLAYER_FORM_SET_TITLE     #language en-US  "Simple Bluetooth SBC Player"
+
+#string STR_SBC_PLAYER_FORM_SET_HELP      #language en-US  "Just Simple Bluetooth SBC Player"
+
+#string STR_SBC_PLAYER_TITLE              #language en-US  "Bluetooth Test Title"
+
+#string STR_SBC_PLAYER_VERSION_TEXT       #language en-US  "Version"
+
+#string STR_SBC_PLAYER_VERSION_TEXT2      #language en-US  "v1.00"
+
+#string STR_SBC_PLAYER_VERSION_HELP       #language en-US  "Software Version"
+
+#string STR_INQUIRY_START_TEXT         #language en-US  "Inquiry Device"
+#string STR_INQUIRY_STATUS_TEXT        #language en-US  "Start Inquiry"
+
+#string STR_REMOTE_DEVICE_TEXT         #language en-US  "Remote Device"
+#string STR_REMOTE_DEVICE_HELP_TEXT    #language en-US  "Select Device"
+
+#string STR_CURRENT_FILE_TEXT          #language en-US  "Current File"
+#string STR_CURRENT_FILE_HELP_TEXT     #language en-US  "Select File"
+
+#string STR_REPEAT_MODE_TEXT           #language en-US  "Repeat Mode"
+#string STR_SELECT_REPEAT_MODE_TEXT    #language en-US  "Select Repeat Mode"
+#string STR_REPEAT_MODE_NONE_TEXT      #language en-US  "None"
+#string STR_REPEAT_MODE_SINGLE_TEXT    #language en-US  "Single"
+#string STR_REPEAT_MODE_ALL_TEXT       #language en-US  "All"
+
+#string STR_START_PLAY_TEXT            #language en-US  "<PLAY>"
+
+#string STR_EMPTY_STRING               #language en-US  ""
+#string STR_ESC_TO_EXIT_TEXT           #language en-US  "Press ESC to exit."
+#string STR_NOT_SELECTED_TEXT          #language en-US  "Not Selected"

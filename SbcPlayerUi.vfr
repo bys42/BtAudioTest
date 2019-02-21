@@ -1,0 +1,69 @@
+#include "VfrDef.h"
+
+formset
+  guid     = FORM_GUID_SBC_PLAYER,
+  title    = STRING_TOKEN(STR_SBC_PLAYER_FORM_SET_TITLE),
+  help     = STRING_TOKEN(STR_SBC_PLAYER_FORM_SET_HELP),
+
+  varstore VAR_STRUCT_SELECTION,
+    varid = VAR_ID_SELECTION,
+    name  = VsSelection,
+    guid  = VAR_GUID_SELECTION;
+
+  form formid = FORM_ID_SBC_PLAYER,
+      title  = STRING_TOKEN(STR_SBC_PLAYER_TITLE);
+
+    text
+      help   = STRING_TOKEN(STR_SBC_PLAYER_VERSION_HELP),
+      text   = STRING_TOKEN(STR_SBC_PLAYER_VERSION_TEXT),
+      text   = STRING_TOKEN(STR_SBC_PLAYER_VERSION_TEXT2),
+      flags  = 0,
+      key    = 0;
+
+    subtitle text = STRING_TOKEN(STR_EMPTY_STRING);
+
+    text
+      help   = STRING_TOKEN(STR_INQUIRY_STATUS_TEXT),
+      text   = STRING_TOKEN(STR_INQUIRY_START_TEXT),
+      flags  = INTERACTIVE,
+      key    = QUESTION_ID_INUIRY_START;
+
+    subtitle text = STRING_TOKEN(STR_EMPTY_STRING);
+
+    label LABEL_DEVICE_SELECTION_START;
+    label LABEL_DEVICE_SELECTION_END;
+
+    subtitle text = STRING_TOKEN(STR_EMPTY_STRING);
+
+    label LABEL_FILE_SELECTION_START;
+    label LABEL_FILE_SELECTION_END;
+
+    subtitle text = STRING_TOKEN(STR_EMPTY_STRING);
+
+    oneof
+      varid      = VAR_STRUCT_SELECTION.RepeatMode,
+      questionid = QUESTION_ID_REPEAT_MODE,
+      prompt     = STRING_TOKEN(STR_REPEAT_MODE_TEXT),
+      help       = STRING_TOKEN(STR_SELECT_REPEAT_MODE_TEXT),
+      flags      = INTERACTIVE,
+      option text = STRING_TOKEN(STR_REPEAT_MODE_NONE_TEXT), value = 0x0, flags = DEFAULT;
+      option text = STRING_TOKEN(STR_REPEAT_MODE_SINGLE_TEXT), value = 0x1, flags = 0;
+      option text = STRING_TOKEN(STR_REPEAT_MODE_ALL_TEXT), value = 0x2, flags = 0;
+    endoneof;
+
+    subtitle text = STRING_TOKEN(STR_EMPTY_STRING);
+
+grayoutif ideqval VsSelection.File == 0 OR ideqval VsSelection.Device == 0;
+    text
+      help   = STRING_TOKEN(STR_START_PLAY_TEXT),
+      text   = STRING_TOKEN(STR_START_PLAY_TEXT),
+      flags  = INTERACTIVE,
+      key    = QUESTION_ID_START_PLAY;
+endif;
+
+    subtitle text = STRING_TOKEN(STR_EMPTY_STRING);
+    subtitle text = STRING_TOKEN(STR_ESC_TO_EXIT_TEXT);
+
+  endform;
+
+endformset;

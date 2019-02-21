@@ -1,0 +1,45 @@
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = SbcPlayer
+  FILE_GUID                      = 99c66992-9673-475e-8dfa-4ffc4a29aa32
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  ENTRY_POINT                    = FormBrowserInit
+
+[Sources]
+  Avdtp.c
+  AvdtpDef.h
+  BtBase.c
+  BtBaseDef.h
+  BtPrint.c
+  FileSelection.c
+  L2CapDef.h
+  SbcPlayer.c
+  SbcPlayer.h
+  SbcPlayer.uni
+  SbcPlayerConfig.h
+  SbcPlayerUi.vfr
+  VfrDef.h
+
+[Packages]
+  MdePkg/MdePkg.dec
+  MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+  BaseMemoryLib
+  PrintLib
+  HiiLib
+  DebugLib
+  UefiApplicationEntryPoint
+  UefiBootServicesTableLib
+  UefiRuntimeServicesTableLib
+  UefiLib
+
+[Guids]
+  gEfiIfrTianoGuid
+
+[Protocols]
+  gEfiUsbIoProtocolGuid
+  gEfiShellProtocolGuid
+  gEfiFormBrowser2ProtocolGuid
+  gEfiHiiConfigAccessProtocolGuid
